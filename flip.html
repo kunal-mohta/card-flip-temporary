@@ -1,13 +1,35 @@
 <html>
 	<head>
+		<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
 		<style>
 
 			#main-wrapper{
 				height:100vh;
 				width:100vw;
-				perspective-origin:50% 0%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				overflow: hidden;
 				perspective: 500px;
 			}
+
+			/*.c1 {
+				perspective-origin: 60% 0%;
+				z-index: 0;
+			}			
+			.c2 {
+				perspective-origin: 40% 0%;
+				z-index: 1;
+			}
+			.c3 {
+				perspective-origin: 60% 0%;
+				z-index: 3;
+			}
+			.c4 {
+				perspective-origin: 40% 0%;
+				z-index: 4;
+			}*/
 			
 			@keyframes drop1{
 				0%{transform: rotateX(20deg) rotateY(-5deg) rotateZ(-5deg) translateZ(300px);}
@@ -25,7 +47,6 @@
 				position:absolute;
 				left:40%;
 				top:20%;
-	
 				transform: rotateX(10deg) rotateY(-5deg) rotateZ(-5deg);
 				animation: drop1 0.7s linear forwards;
 			}
@@ -95,10 +116,16 @@
 		</style>
 	</head>
 	<body>
-	<div id = "main-wrapper">
+	<div id="main-wrapper" class="c1">
 		<div id = "card1"></div>
+	</div>
+	<div id="main-wrapper" class="c2">
 		<div id = "card2"></div>
+	</div>
+	<div id="main-wrapper" class="c3">
 		<div id = "card3"></div>
+	</div>
+	<div id="main-wrapper" class="c4">
 		<div id = "card4"></div>
 	</div>
 	</body>
