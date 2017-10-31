@@ -1,20 +1,20 @@
 var keys = new Array(); // search why can't the array be inside jquery
 $(document).ready(function(){
 
-        for(var i=1; i<=4; i++)
+        for(var i=1; i<=8; i++)
 	{
 		var x = document.getElementsByClassName('c'+i);
 		if(i%2==1)
 		{
 			$(".c"+i).css({
-				'perspective-origin' : '60% 0%',
+				'perspective-origin' : '80% 0%',
 				'z-index' : i
 			});
 		}
 		else 
 		{
 			$(".c"+i).css({
-				'perspective-origin' : '40% 0%',
+				'perspective-origin' : '20% 0%',
 				'z-index' : i
 			});
 		}
